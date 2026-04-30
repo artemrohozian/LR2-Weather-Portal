@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Інформація про проєкт WeatherPortal">
+    <meta name="keywords" content="про сайт, інформація, погода, HTML, CSS">
+    <meta name="author" content="Рогозян Артем ПЗПІ-25-4">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WeatherPortal – Про сайт</title>
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__inner">
+        <div class="logo">🌤️ Weather<span>Portal</span></div>
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle" class="menu__toggle">
+            <label for="menu-toggle" class="menu__burger">☰</label>
+            <ul class="menu">
+                <li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
+                <li class="menu__item menu__item--has-dropdown">
+                    <a href="#" class="menu__link">Прогноз ▾</a>
+                    <ul class="menu__dropdown">
+                        <li class="menu__item"><a href="index.html#current" class="menu__link">Поточна</a></li>
+                        <li class="menu__item"><a href="index.html#forecast" class="menu__link">5 днів</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item"><a href="about.html" class="menu__link">Про сайт</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Контакти</a></li>
+                <li class="menu__item"><a href="grid-demo.html" class="menu__link">Grid-демо</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main main--single-col">
+    <article class="card">
+        <h1>Про проєкт</h1>
+        <p><b>WeatherPortal</b> — навчальний вебсайт, створений у рамках лабораторної роботи з дисципліни «ГІПЕРТЕКСТ ТА ГІПЕРМЕДІА».</p>
+        <p><i>Мета:</i> продемонструвати використання основних тегів HTML5, семантичної розмітки, CSS-стилів та інтерактивних елементів.</p>
+
+        <h2>Використані технології</h2>
+        <ul>
+            <li>HTML5: семантичні теги</li>
+            <li>CSS3: градієнти, тіні, прозорість, Grid Layout, BEM</li>
+            <li>JavaScript: динамічне завантаження погоди з API</li>
+        </ul>
+
+        <p style="text-align: center; margin-top: 20px;">
+            <img src="logo.png" alt="Логотип погодного порталу" width="200" style="border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+        </p>
+    </article>
+</main>
+
+<footer class="footer">
+    <p>© 2026 WeatherPortal | Рогозян Артем ПЗПІ-25-4</p>
+</footer>
+
+<a href="#" class="fixed-badge">💡</a>
+</body>
+</html>

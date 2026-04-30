@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт прогнозу погоди – навчальний проект">
+    <meta name="keywords" content="погода, weather, HTML, CSS, прогноз">
+    <meta name="author" content="Рогозян Артем ПЗПІ-25-4">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WeatherPortal – Головна</title>
+    <link rel="icon" type="image/png" href="../logo.png">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__inner">
+        <div class="logo">🌤️ Weather<span>Portal</span></div>
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle" class="menu__toggle">
+            <label for="menu-toggle" class="menu__burger">☰</label>
+
+            <ul class="menu">
+                <li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
+                <li class="menu__item menu__item--has-dropdown">
+                    <a href="#" class="menu__link">Прогноз ▾</a>
+                    <ul class="menu__dropdown">
+                        <li class="menu__item"><a href="#current" class="menu__link">Поточна погода</a></li>
+                        <li class="menu__item"><a href="#forecast" class="menu__link">5 днів</a></li>
+                        <li class="menu__item"><a href="#map" class="menu__link">Карта</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item"><a href="about.html" class="menu__link">Про сайт</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Контакти</a></li>
+                <li class="menu__item"><a href="grid-demo.html" class="menu__link">Grid-демо</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <div class="main__content">
+        <section id="search" class="card">
+            <h2>Пошук погоди</h2>
+            <div class="search">
+                <input type="text" id="cityInput" class="search__input" placeholder="Введіть місто...">
+                <button class="btn" onclick="searchWeather()">Шукати</button>
+            </div>
+            <p id="errorMsg" style="color: red;"></p>
+        </section>
+
+        <article id="current" class="card">
+            <h2 id="cityName">Завантаження...</h2>
+            <p id="currentDate"></p>
+            <p style="font-size: 3rem; margin: 10px 0;">
+                <span id="weatherIcon"></span>
+                <span id="currentTemp">--°C</span>
+            </p>
+            <p id="weatherDesc"></p>
+            <p>💧 Вологість: <span id="humidity"></span></p>
+            <p>💨 Вітер: <span id="windSpeed"></span></p>
+            <p>🔽 Тиск: <span id="pressure"></span></p>
+        </article>
+
+        <section id="forecast" class="card">
+            <h2>Прогноз на 5 днів</h2>
+            <table class="forecast-table">
+                <thead>
+                    <tr>
+                        <th>День</th>
+                        <th>Іконка</th>
+                        <th>Температура</th>
+                        <th>Опис</th>
+                    </tr>
+                </thead>
+                <tbody id="forecastTableBody">
+                </tbody>
+            </table>
+        </section>
+
+        <section id="map" class="card">
+            <h2>Карта опадів</h2>
+            <iframe title="Weather Map" width="100%" height="350" src="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=temperature&lat=50.0&lon=36.25&zoom=7"></iframe>
+        </section>
+    </div>
+
+    <aside class="main__sidebar">
+        <div class="card">
+            <h3>Новини</h3>
+            <ul>
+                <li>Травень 2026 – рекордне тепло</li>
+                <li>Грози на заході України</li>
+                <li>Аномальна засуха на півдні</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Поради</h3>
+            <ol>
+                <li>Завжди беріть парасольку</li>
+                <li>Одягайтеся за погодою</li>
+                <li>Слідкуйте за штормовими попередженнями</li>
+            </ol>
+        </div>
+    </aside>
+</main>
+
+<footer class="footer">
+    <p>© 2026 WeatherPortal | Рогозян Артем ПЗПІ-25-4 | <a href="contact.html" style="color: #ffcc00;">Контакти</a></p>
+</footer>
+
+ 
+<a href="#" class="fixed-badge" title="Порада дня">💡</a>
+
+<script src="../app.js"></script>
+</body>
+</html>
